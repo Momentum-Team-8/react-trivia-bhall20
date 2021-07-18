@@ -1,10 +1,10 @@
 import React, { useMemo } from 'react'
-import shuffle from 'lodash'
+import _ from 'lodash'
 
 export const AnswerChoices = ({ answers, setAnswered, checkAnswer, commitAnswer }) => {
   const { correctAnswer, incorrectAnswers } = answers
   const shuffledAnswers = useMemo(
-    () => shuffle([correctAnswer, ...incorrectAnswers]),
+    () => _.shuffle([correctAnswer, ...incorrectAnswers]),
     [correctAnswer, incorrectAnswers]
   )
   const handleClick = (answer) => {
@@ -12,15 +12,9 @@ export const AnswerChoices = ({ answers, setAnswered, checkAnswer, commitAnswer 
     checkAnswer(correctAnswer === answer)
     commitAnswer()
   }
-  return shuffledAnswers.__wrapped__.map((item) => {
+  return shuffledAnswers.map((item) => {
     return (
-      <button
-        key={item}
-        class='button is-primary is-light is-rounded'
-        onClick={() => {
-          handleClick(item)
-        }}
-      >
+      <button key={item} className='button is-warning' onClick={() => { handleClick(item) }}>
         {item}
       </button>
     )

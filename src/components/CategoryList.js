@@ -1,31 +1,20 @@
-import React from 'react';
+import React from 'react'
 
 export const CategoryList = (props) => {
   const { categories, setSelectedCategory } = props
   return (
-    <div>
-      <h1> Categories:</h1>
-      <div className='is-flex is-flex-direction-row is-flex-wrap-wrap is-align-content-space-between'>
-        {categories.map((category) => {
+    <main className='main'>
+      <h1 className='title'>Time for Trivia!</h1>
+      <h1 className='title'>Select a Category:</h1>
+      <div className='container'>
+        {categories.map(category => {
           return (
-            <div key={category.id} class='card' class='tile is-parent is-6'>
-              <p
-                class='card-content'
-                class='title has-text-centered tile is-child box'
-              >
-                {category.name}
-                <br />
-                <button
-                  class='button is-primary is-outlined'
-                  onClick={() => setSelectedCategory(category)}
-                >
-                  Play
-                </button>
-              </p>
+            <div key={category.id} className='box'>
+              <button className='button is-info is-rounded' onClick={() => setSelectedCategory(category)}>{category.name}</button>
             </div>
           )
         })}
       </div>
-    </div>
+    </main>
   )
-};
+}
