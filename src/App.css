@@ -25,7 +25,7 @@
 
 .box {
   margin: 20px;
-  border: dotted 2px;
+  border: groove 2px;
 }
 
 section > button {
