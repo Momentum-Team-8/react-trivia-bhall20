@@ -19,6 +19,7 @@ function App () {
           <CategoryList
             categories={categories}
             setSelectedCategory={setSelectedCategory}
+    <h1>{Header}</h1>
           />
           )}
     </div>
