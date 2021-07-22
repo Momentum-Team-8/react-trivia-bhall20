@@ -3,6 +3,7 @@ import './App.css'
 import { getCategoryList } from './api'
 import { CategoryList } from './components/CategoryList'
 import { CategoryData } from './components/CategoryData'
+import { Header } from './components/Header'
 
 function App () {
   const [categories, setCategories] = useState([])

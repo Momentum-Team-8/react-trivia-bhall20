@@ -17,7 +17,7 @@ export const CategoryData = (props) => {
   }, [selectedCategory])
 
   return loading
-    ? 'Category data is loading'
+    ? 'Please wait category data is loading'
     : (
       <>
         <div className='category-header'>

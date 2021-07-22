@@ -4,8 +4,11 @@
   box-sizing: border-box;
 } 
 
-.category-header, .questions, .main {
-  margin-left: 10px;
+.questions, .main {
+  margin-left: 10px; font-size: 12px;
+}
+.category-header {
+  margin-left: 14px; color: black;
 }
 
 .container {
